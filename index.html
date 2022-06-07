@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTENKIMUSIC</title>
+    
+    <style>
+        body{
+            text-align: center;
+            margin: auto;
+        }
+        table,
+        th,
+        td {
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+        iframe{
+            display: none;
+        }
+        button{
+            margin-bottom: 20px;
+        }
+        ul{
+            padding: 0;
+        }
+        li{
+            list-style: none;
+        }
+        img{
+            width: 10%;
+        }
+        .threeDays{
+            background-color: #fff;
+            color: #000;
+            border-radius: 30px;
+            width: 80%;
+            margin: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>今日はどんな気分ですか？？</h1>
+    <button type="button" value="0">めっちゃ気分いいわ〜！！</button>
+    <button type="button" value="1">なーんか調子悪いなぁ…</button>
+    <div class="read"></div>
+    <div class="list"></div>
+    <div class="music"></div>
+    <div id="player"></div>
+    <h2></h2>
+    <nav>
+        <ul>
+            <li id="doplay" onclick="clickBtn1()"><img class="saisei" src="./images/play_icon_764-300x300.png" alt=""></li>
+            
+            <li id="dopause" onclick="clickBtn2()"><img class="teisi" src="./images/pose_icon_804-300x300.png" alt=""></li>
+            <li id="mute">ミュート</li>
+        </ul>
+    </nav>
+    <label
+	>ボリューム<input type="range" min="0" max="200" name="volume" id="volume" value="50" />
+	<span id="volumeNum"></span>
+</label>
+    
+
+    
+    <div class="threeDays"></div>
+    
+    <script src="./weathercode.js"></script>
+    <script src="./weatherapri.js"></script>
